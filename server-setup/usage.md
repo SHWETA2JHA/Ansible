@@ -2,7 +2,7 @@
 
 ### Clone the repository:
 
-git clone https://github.com/SHWETA2JHA/ansible-automation.git
+git clone https://github.com/SHWETA2JHA/ansible.git
 
 ### Navigate to the project directory:
 
