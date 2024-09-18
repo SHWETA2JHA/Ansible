@@ -1,4 +1,4 @@
-# To set up the web server using Ansible, follow these steps:
+## To set up the web server using Ansible, follow these steps:
 
 ### Clone the repository:
 
