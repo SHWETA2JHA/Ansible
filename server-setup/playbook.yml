@@ -1,0 +1,29 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+
+    - name: Copy the index.html file to the web server
+      copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+
+    - name: Open HTTP port in UFW
+      ufw:
+        rule: allow
+        name: "Nginx HTTP"
+
+    - name: Enable UFW
+      ufw:
+        state: enabled
